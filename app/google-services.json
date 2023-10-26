@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1045738133072",
+    "project_id": "logintba-76c9d",
+    "storage_bucket": "logintba-76c9d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045738133072:android:07f32e8c089b2805e46355",
+        "android_client_info": {
+          "package_name": "com.example.logintba"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC22x3XmBfgGKfZ01PcltGNqxmrF00k0io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
