@@ -30,16 +30,18 @@ class RegisterActivity : AppCompatActivity() {
             val editPassword : EditText = findViewById(R.id.editPassword)
             val editCPassword : EditText = findViewById(R.id.editCPassword)
 
+
             if(editEmail.text.isNotEmpty() && editCPassword.text.isNotEmpty() && editPassword.text.isNotEmpty()){
                 //Toast.makeText(this,"Input Provided", Toast.LENGTH_LONG).show()
                 //registerUser();
-                firebaseAuth.createUserWithEmailAndPassword(editEmail.toString(), editPassword.toString()).addOnCompleteListener(this) { task ->
+                firebaseAuth.createUserWithEmailAndPassword(editEmail.text.toString(), editPassword.text.toString()).addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
                         Toast.makeText(this,"Register successful",Toast.LENGTH_LONG).show()
                         val currentUser: FirebaseUser = firebaseAuth.currentUser!!
                     } else {
                         // If sign in fails, display a message to the user.
+                        Log.w(TAG, "createUserWithEmail:failure", task.exception)
                         Toast.makeText(this,"Register failed "+task.exception,Toast.LENGTH_LONG).show()
                     }
                 }
