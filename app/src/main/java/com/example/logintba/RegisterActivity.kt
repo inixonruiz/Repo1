@@ -39,6 +39,9 @@ class RegisterActivity : AppCompatActivity() {
                         // Sign in success, update UI with the signed-in user's information
                         Toast.makeText(this,"Register successful",Toast.LENGTH_LONG).show()
                         val currentUser: FirebaseUser = firebaseAuth.currentUser!!
+                        val user = firebaseAuth.currentUser
+                        Toast.makeText(this,"Registered User: $user",Toast.LENGTH_LONG).show()
+
                     } else {
                         // If sign in fails, display a message to the user.
                         Log.w(TAG, "createUserWithEmail:failure", task.exception)
